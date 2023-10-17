@@ -10,17 +10,18 @@ public class Main {
         Integer integer;
 
         try {
-            UInteger x = new UInteger(0);
-            UInteger y = new UInteger(20);
+            UInteger x = new UInteger("5");
+            UInteger y = new UInteger("6");
 
-            result = x.divide(y);
+            int xd = UInteger.reverseBytes(x);
+            System.out.println("xd: " + xd);
 
         } catch (UIntegerException e) {
             System.out.println(e.getMessage());
             return;
         }
 
-        System.out.println("\nResult: " + result.getValue());
+//        System.out.println("\nResult: " + result.getValue());
 
     }
 
